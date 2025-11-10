@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const tourRouter = require("./routes/tourRouter");
+const userRouter = require("./routes/userRouter")
 
 
 
@@ -8,6 +9,7 @@ const tourRouter = require("./routes/tourRouter");
 // Middleware to parse JSON
 app.use(express.json());
 app.use("/tours", tourRouter);
+app.use("/users", userRouter);
 
 const port = 4000;
 // Start the server
