@@ -3,6 +3,7 @@ const app = express();
 const tourRouter = require("./routes/tourRouter");
 const userRouter = require("./routes/userRouter")
 const morgan = require('morgan');
+const authorizeUsersAccess = require("./middleware/auth");
 app.use(morgan('tiny'));
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms'));
 
