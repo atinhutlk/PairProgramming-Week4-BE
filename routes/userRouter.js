@@ -13,16 +13,21 @@ const {
 // GET 
 router.get("/", getAllUsers);
 
-// POST 
-router.post("/", authorizeUsersAccess, createUser);
-
 // GET 
 router.get("/:userId", getUserById);
 
+
+//middleware
+router.use(authorizeUsersAccess);
+
+
+// POST 
+router.post("/",createUser);
+
 // PUT
-router.put("/:userId", authorizeUsersAccess,updateUser);
+router.put("/:userId", updateUser);
 
 // DELETE 
-router.delete("/:userId", authorizeUsersAccess, deleteUser);
+router.delete("/:userId", deleteUser);
 
 module.exports = router;  
