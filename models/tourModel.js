@@ -1,4 +1,3 @@
-// Updated data model
 /*
 {
   "name": "Adventures in Tokyo - 5 Day Tour",
